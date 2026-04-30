@@ -10,14 +10,14 @@ import javax.swing.JOptionPane;
  *
  * @author 1094260
  */
-public class Form1 extends javax.swing.JFrame {
+public class Calculadora extends javax.swing.JFrame {
     
-    private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(Form1.class.getName());
+    private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(Calculadora.class.getName());
 
     /**
      * Creates new form Form1
      */
-    public Form1() {
+    public Calculadora() {
         initComponents();
     }
     
@@ -72,7 +72,7 @@ public class Form1 extends javax.swing.JFrame {
         jbMultiplicar = new javax.swing.JButton();
         jbDividir = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(102, 255, 102));
         jPanel1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -200,6 +200,7 @@ public class Form1 extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jbSomarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbSomarActionPerformed
@@ -240,7 +241,7 @@ public class Form1 extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(() -> new Form1().setVisible(true));
+        java.awt.EventQueue.invokeLater(() -> new Calculadora().setVisible(true));
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
