@@ -28,6 +28,8 @@ public class MenuInicial extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jbCalculadora = new javax.swing.JButton();
+        jbTriangulo = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
@@ -37,6 +39,12 @@ public class MenuInicial extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Menu Inicial");
+
+        jbCalculadora.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/calculadorapng.png"))); // NOI18N
+        jbCalculadora.addActionListener(this::jbCalculadoraActionPerformed);
+
+        jbTriangulo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/triangulopng.png"))); // NOI18N
+        jbTriangulo.addActionListener(this::jbTrianguloActionPerformed);
 
         jMenu1.setText("Formularios");
 
@@ -62,11 +70,21 @@ public class MenuInicial extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1033, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jbCalculadora)
+                .addGap(18, 18, 18)
+                .addComponent(jbTriangulo)
+                .addContainerGap(797, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 658, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jbTriangulo)
+                    .addComponent(jbCalculadora))
+                .addContainerGap(545, Short.MAX_VALUE))
         );
 
         pack();
@@ -82,6 +100,16 @@ public class MenuInicial extends javax.swing.JFrame {
         Pitagoras p = new Pitagoras();
         p.setVisible(true);
     }//GEN-LAST:event_jMenuItem2ActionPerformed
+
+    private void jbCalculadoraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbCalculadoraActionPerformed
+        Calculadora c = new Calculadora();
+        c.setVisible(true);
+    }//GEN-LAST:event_jbCalculadoraActionPerformed
+
+    private void jbTrianguloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbTrianguloActionPerformed
+        Pitagoras p = new Pitagoras();
+        p.setVisible(true);
+    }//GEN-LAST:event_jbTrianguloActionPerformed
 
     /**
      * @param args the command line arguments
@@ -115,5 +143,7 @@ public class MenuInicial extends javax.swing.JFrame {
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem2;
+    private javax.swing.JButton jbCalculadora;
+    private javax.swing.JButton jbTriangulo;
     // End of variables declaration//GEN-END:variables
 }
