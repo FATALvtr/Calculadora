@@ -30,6 +30,7 @@ public class MenuInicial extends javax.swing.JFrame {
 
         jbCalculadora = new javax.swing.JButton();
         jbTriangulo = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
@@ -39,12 +40,22 @@ public class MenuInicial extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Menu Inicial");
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jbCalculadora.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/calculadorapng.png"))); // NOI18N
+        jbCalculadora.setBackground(new java.awt.Color(0, 0, 0));
+        jbCalculadora.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/CalculadoraGreen.png"))); // NOI18N
+        jbCalculadora.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jbCalculadora.addActionListener(this::jbCalculadoraActionPerformed);
+        getContentPane().add(jbCalculadora, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 100, 100));
 
+        jbTriangulo.setBackground(new java.awt.Color(0, 0, 0));
         jbTriangulo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/triangulopng.png"))); // NOI18N
+        jbTriangulo.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jbTriangulo.addActionListener(this::jbTrianguloActionPerformed);
+        getContentPane().add(jbTriangulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 10, 100, 100));
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/Best Animations.gif"))); // NOI18N
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 500, 460));
 
         jMenu1.setText("Formularios");
 
@@ -65,27 +76,6 @@ public class MenuInicial extends javax.swing.JFrame {
         jMenuBar1.add(jMenu3);
 
         setJMenuBar(jMenuBar1);
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jbCalculadora)
-                .addGap(18, 18, 18)
-                .addComponent(jbTriangulo)
-                .addContainerGap(797, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jbTriangulo)
-                    .addComponent(jbCalculadora))
-                .addContainerGap(545, Short.MAX_VALUE))
-        );
 
         pack();
         setLocationRelativeTo(null);
@@ -137,6 +127,7 @@ public class MenuInicial extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;

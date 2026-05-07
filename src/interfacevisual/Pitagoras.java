@@ -63,13 +63,17 @@ public class Pitagoras extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Pitagoras");
 
+        jPanel1.setBackground(new java.awt.Color(0, 0, 0));
         jPanel1.setBorder(new javax.swing.border.MatteBorder(null));
         jPanel1.setToolTipText("");
 
+        jLabel1.setForeground(new java.awt.Color(153, 255, 0));
         jLabel1.setText("Lado 1:");
 
+        jLabel2.setForeground(new java.awt.Color(153, 255, 0));
         jLabel2.setText("Lado 2:");
 
+        jLabel3.setForeground(new java.awt.Color(153, 255, 0));
         jLabel3.setText("Lado 3:");
 
         txfLado1.addActionListener(this::txfLado1ActionPerformed);
@@ -78,10 +82,13 @@ public class Pitagoras extends javax.swing.JFrame {
 
         txfLado3.addActionListener(this::txfLado3ActionPerformed);
 
+        jbVerificar.setBackground(new java.awt.Color(153, 255, 0));
+        jbVerificar.setForeground(new java.awt.Color(0, 0, 0));
         jbVerificar.setText("Verificar Tipo");
         jbVerificar.addActionListener(this::jbVerificarActionPerformed);
 
         jlbResultado.setFont(new java.awt.Font("MingLiU_HKSCS-ExtB", 1, 18)); // NOI18N
+        jlbResultado.setForeground(new java.awt.Color(153, 255, 0));
         jlbResultado.setText("      TIPO");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
