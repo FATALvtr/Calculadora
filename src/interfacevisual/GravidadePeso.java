@@ -132,6 +132,8 @@ public class GravidadePeso extends javax.swing.JFrame {
             
             
         } catch (Exception e) {
+            
+            throw new AssertionError();
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 
