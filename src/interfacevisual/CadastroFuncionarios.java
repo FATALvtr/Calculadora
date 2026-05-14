@@ -169,6 +169,7 @@ public class CadastroFuncionarios extends javax.swing.JFrame {
         bgTurno.add(jrbNoite);
         jrbNoite.setForeground(new java.awt.Color(51, 204, 0));
         jrbNoite.setText("Noite");
+        jrbNoite.addActionListener(this::jrbNoiteActionPerformed);
         jPanel1.add(jrbNoite, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 320, -1, 30));
 
         jLabel7.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -179,6 +180,7 @@ public class CadastroFuncionarios extends javax.swing.JFrame {
         bgTurno.add(jrbManha);
         jrbManha.setForeground(new java.awt.Color(51, 204, 0));
         jrbManha.setText("Manhã");
+        jrbManha.addActionListener(this::jrbManhaActionPerformed);
         jPanel1.add(jrbManha, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 240, -1, 30));
 
         bgTurno.add(jrbTarde);
@@ -283,6 +285,14 @@ public class CadastroFuncionarios extends javax.swing.JFrame {
         }
         
     }//GEN-LAST:event_sldNivelStateChanged
+
+    private void jrbNoiteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrbNoiteActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jrbNoiteActionPerformed
+
+    private void jrbManhaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrbManhaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jrbManhaActionPerformed
 
     /**
      * @param args the command line arguments
