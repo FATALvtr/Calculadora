@@ -72,7 +72,7 @@ public class CadastroFuncionarios extends javax.swing.JFrame {
                     "\nTurno:\n"+turnoSelect+
                     "\nBeneficios:\n"+beneficios+
                     nivelFinal
-                            , "Dados do Cadastro", , icon);
+                            , "Dados do Cadastro", JOptionPane.INFORMATION_MESSAGE, null);
 //            System.out.println("Funcionario:\n"+funcionario);
 //
 //            System.out.println("\nSetor:\n"+setorSelect);
