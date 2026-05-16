@@ -153,7 +153,8 @@ public class MenuInicial extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem3ActionPerformed
 
     private void jbCalculadora1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbCalculadora1ActionPerformed
-        // TODO add your handling code here:
+        Calculadora c = new Calculadora();
+        c.setVisible(true);
     }//GEN-LAST:event_jbCalculadora1ActionPerformed
 
     /**
