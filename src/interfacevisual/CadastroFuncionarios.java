@@ -67,23 +67,13 @@ public class CadastroFuncionarios extends javax.swing.JFrame {
             } else {
                 JOptionPane.showMessageDialog(null, "Nivel de Experiencia nao selecionado!");
             }
-            JOptionPane.showMessageDialog(null, "Funcionario:\n"+funcionario+
-                    "\nSetor:\n"+setorSelect+
-                    "\nTurno:\n"+turnoSelect+
+            JOptionPane.showMessageDialog(null, "Funcionario:\n"+funcionario+"\n"+
+                    "\nSetor:\n"+setorSelect+"\n"+
+                    "\nTurno:\n"+turnoSelect+"\n"+
                     "\nBeneficios:\n"+beneficios+
                     nivelFinal
                             , "Dados do Cadastro", JOptionPane.INFORMATION_MESSAGE, null);
-//            System.out.println("Funcionario:\n"+funcionario);
-//
-//            System.out.println("\nSetor:\n"+setorSelect);
-//
-//            System.out.println("\nTurno:\n"+turnoSelect);
-//
-//            System.out.println("\nBeneficios:\n"+beneficios);
-//
-//            System.out.println(nivelFinal);
-//
-//            System.out.println("------------------------------");
+
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "Ocorreu um erro ao cadastrar funcionario, tente mais tarde!");
         }

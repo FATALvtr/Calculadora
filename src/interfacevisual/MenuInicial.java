@@ -30,8 +30,9 @@ public class MenuInicial extends javax.swing.JFrame {
 
         jButton1 = new javax.swing.JButton();
         jbPlaneta = new javax.swing.JButton();
-        jbCalculadora = new javax.swing.JButton();
+        jbGames = new javax.swing.JButton();
         jbTriangulo = new javax.swing.JButton();
+        jbCalculadora1 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
@@ -58,17 +59,23 @@ public class MenuInicial extends javax.swing.JFrame {
         jbPlaneta.addActionListener(this::jbPlanetaActionPerformed);
         getContentPane().add(jbPlaneta, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 10, 100, -1));
 
-        jbCalculadora.setBackground(new java.awt.Color(0, 0, 0));
-        jbCalculadora.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/CalculadoraGreen.png"))); // NOI18N
-        jbCalculadora.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jbCalculadora.addActionListener(this::jbCalculadoraActionPerformed);
-        getContentPane().add(jbCalculadora, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 100, 100));
+        jbGames.setBackground(new java.awt.Color(0, 0, 0));
+        jbGames.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/game.png"))); // NOI18N
+        jbGames.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jbGames.addActionListener(this::jbGamesActionPerformed);
+        getContentPane().add(jbGames, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 110, -1, 110));
 
         jbTriangulo.setBackground(new java.awt.Color(0, 0, 0));
         jbTriangulo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/triangulopng.png"))); // NOI18N
         jbTriangulo.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jbTriangulo.addActionListener(this::jbTrianguloActionPerformed);
         getContentPane().add(jbTriangulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 10, 100, 100));
+
+        jbCalculadora1.setBackground(new java.awt.Color(0, 0, 0));
+        jbCalculadora1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/CalculadoraGreen.png"))); // NOI18N
+        jbCalculadora1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jbCalculadora1.addActionListener(this::jbCalculadora1ActionPerformed);
+        getContentPane().add(jbCalculadora1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 100, 100));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/Best Animations.gif"))); // NOI18N
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 500, 460));
@@ -115,10 +122,10 @@ public class MenuInicial extends javax.swing.JFrame {
         p.setVisible(true);
     }//GEN-LAST:event_jMenuItem2ActionPerformed
 
-    private void jbCalculadoraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbCalculadoraActionPerformed
-        Calculadora c = new Calculadora();
-        c.setVisible(true);
-    }//GEN-LAST:event_jbCalculadoraActionPerformed
+    private void jbGamesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbGamesActionPerformed
+        Games g = new Games();
+        g.setVisible(true);
+    }//GEN-LAST:event_jbGamesActionPerformed
 
     private void jbTrianguloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbTrianguloActionPerformed
         Pitagoras p = new Pitagoras();
@@ -144,6 +151,10 @@ public class MenuInicial extends javax.swing.JFrame {
         GravidadePeso g = new GravidadePeso();
         g.setVisible(true);
     }//GEN-LAST:event_jMenuItem3ActionPerformed
+
+    private void jbCalculadora1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbCalculadora1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jbCalculadora1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -181,7 +192,8 @@ public class MenuInicial extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JMenuItem jMenuItem4;
-    private javax.swing.JButton jbCalculadora;
+    private javax.swing.JButton jbCalculadora1;
+    private javax.swing.JButton jbGames;
     private javax.swing.JButton jbPlaneta;
     private javax.swing.JButton jbTriangulo;
     // End of variables declaration//GEN-END:variables

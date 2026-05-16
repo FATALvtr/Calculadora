@@ -19,12 +19,12 @@ public class Games extends javax.swing.JFrame {
      */
     public Games() {
         initComponents();
-    }
-    public void dados(){
+    
+    }public void dados(){
         Random random = new Random();
         
         int jogada = 0;
-        int maquina = random.nextInt(3);
+        int maquina = random.nextInt(4);
         
         if (jrbPedra.isSelected()) {
             jogada = 1;
@@ -34,29 +34,63 @@ public class Games extends javax.swing.JFrame {
             jogada = 3;
         }else{
             JOptionPane.showMessageDialog(null, "SOLDADO! Escolha a sua ARMA!!!");
+            return;
         }
         
-        if(jogada== 1 && maquina == 3){
-            JOptionPane.showMessageDialog(null, "Pedra Ataca Tesoura!");
-            JOptionPane.showMessageDialog(null, "Você venceu!");
-        }else if(jogada== 2 && maquina == 1){
-            JOptionPane.showMessageDialog(null, "Papel Ataca Pedra!");
-            JOptionPane.showMessageDialog(null, "Você venceu!");
-        }else if(jogada== 3 && maquina == 2){
-            JOptionPane.showMessageDialog(null, "Tesoura Ataca Papel!");
-            JOptionPane.showMessageDialog(null, "Você venceu!");
-        }else if(maquina == 1 && jogada== 3){
-            JOptionPane.showMessageDialog(null, "Tesoura Ataca Pedra!");
-            JOptionPane.showMessageDialog(null, "A maquina venceu!");
-        }else if(maquina == 2 && jogada== 1){
-            JOptionPane.showMessageDialog(null, "Pedra Ataca Papel!");
-            JOptionPane.showMessageDialog(null, "A maquina venceu!");
-        }else if(maquina == 3 && jogada== 2){
-            JOptionPane.showMessageDialog(null, "Tesoura Ataca Papel!");
-            JOptionPane.showMessageDialog(null, "A maquina venceu!");
-    }
+        switch (jogada) {
+            case 1:
+                //System.out.println("111111111111111111111");
+                if(jogada== 1 && maquina == 3){
+                    JOptionPane.showMessageDialog(null, "Pedra Ataca Tesoura!");
+                    JOptionPane.showMessageDialog(null, "Você venceu!","Resultado",JOptionPane.INFORMATION_MESSAGE);
+                }else if(jogada== 1 && maquina == 2){
+                    JOptionPane.showMessageDialog(null, "Pedra Ataca Papel!");
+                    JOptionPane.showMessageDialog(null, "A maquina venceu!", "Resultado",JOptionPane.ERROR_MESSAGE);
+                }else if (jogada == 1 && maquina == 1){
+                    JOptionPane.showMessageDialog(null, "Empatou!","Resultado",JOptionPane.WARNING_MESSAGE);
+                }else{
+                    JOptionPane.showMessageDialog(null, "A maquina Desistiu!");
+                }
+                break;
+            case 2:
+                //System.out.println("222222222222222");
+                if(jogada== 2 && maquina == 1){
+                    JOptionPane.showMessageDialog(null, "Papel Ataca Pedra!");
+                    JOptionPane.showMessageDialog(null, "Você venceu!","Resultado",JOptionPane.INFORMATION_MESSAGE);
+                }else if(jogada == 2 && maquina == 3){
+                    JOptionPane.showMessageDialog(null, "Papel Ataca Tesoura!");
+                    JOptionPane.showMessageDialog(null, "A maquina venceu!", "Resultado",JOptionPane.ERROR_MESSAGE);
+                }else if (jogada == 2 && maquina == 2){
+                    JOptionPane.showMessageDialog(null, "Empatou!","Resultado",JOptionPane.WARNING_MESSAGE);
+                }else{
+                    JOptionPane.showMessageDialog(null, "A maquina Desistiu!");
+                }
+                break;
+            case 3:
+                //System.out.println("333333333333333333");
+                if(jogada== 3 && maquina == 2){
+                    JOptionPane.showMessageDialog(null, "Tesoura Ataca Papel!");
+                    JOptionPane.showMessageDialog(null, "Você venceu!","Resultado",JOptionPane.INFORMATION_MESSAGE);
+                }else if(jogada == 3 && maquina == 1){
+                    JOptionPane.showMessageDialog(null, "Tesoura Ataca Pedra!");
+                    JOptionPane.showMessageDialog(null, "A maquina venceu!", "Resultado",JOptionPane.ERROR_MESSAGE);
+                }else if(jogada == 3 && maquina == 3){
+                    JOptionPane.showMessageDialog(null, "Empatou!","Resultado",JOptionPane.WARNING_MESSAGE);
+                }else{
+                    JOptionPane.showMessageDialog(null, "A maquina Desistiu!");
+                }
+                break;
+            default:
+                JOptionPane.showMessageDialog(null, "Ocorreu um erro no sistema!", "Error", JOptionPane.ERROR_MESSAGE);
+                throw new AssertionError();
+                
+        }
         return;
     }
+
+
+    
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -80,6 +114,7 @@ public class Games extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Games");
+        setResizable(false);
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -183,3 +218,4 @@ public class Games extends javax.swing.JFrame {
     private javax.swing.JRadioButton jrbTesoura;
     // End of variables declaration//GEN-END:variables
 }
+
